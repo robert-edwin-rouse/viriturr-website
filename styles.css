@@ -149,7 +149,7 @@ nav:hover button:not(:hover) {
   top: 0;
   max-width: 400px;
   padding: 40px 20px;
-  /* background-color: #21292b; */
+  background-color: #21292b;
   color: white;
   height: 100%;
   z-index: 99;
