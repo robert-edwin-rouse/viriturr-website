@@ -1,275 +1,249 @@
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    font-family: sans-serif;
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    color: #333;
-    background-color: #fff;
-    min-height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-h1 {
-    margin: .67em 0;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 44px;
-}
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-    color: #323c3f;
-    text-decoration: underline;
+  color: #323c3f;
+  text-decoration: underline;
+}
+
+button {
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    vertical-align: middle;
-    max-width: 100%;
-    display: inline-block;
+  vertical-align: middle;
+  width: 40%;
+  min-width: 320px;
+  display: inline-block;
 }
 
-.body {
-    background-color: #21292b;
-    border: 0 #000;
-    display: flex;
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+  height: 100dvh;
+  width: 100%;
 }
 
-.modal-backdrop {
-    z-index: 4;
-    background-color: rgba(33, 41, 43, .5);
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    position: fixed;
+body {
+  background-color: #21292b;
+  border: 0 #000;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  margin: 0;
+  color: #333;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
-.centre-image {
-    width: 256px;
-    height: 256px;
-    margin: auto;
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+
+main {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
-.modal-body {
-    background-color: #eaded6;
-    width: 850px;
-    height: 550px;
-    margin: auto;
-    display: block;
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    overflow: auto;
+h1 {
+  margin: .67em 0;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 20px 0;
+  color: #e89d53;
+  text-align: left;
+  font-family: Ethnocentric Rg, sans-serif;
 }
 
 .button-modal {
-    color: #e89d53;
-    text-align: center;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background-color: rgba(56, 152, 236, 0);
-    width: 80px;
-    min-width: 80px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 0;
-    padding-right: 0;
-    font-family: Din Condensed, sans-serif;
+  color: #e89d53;
+  font-size: 1.25rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgba(56, 152, 236, 0);
+  border-width: 0 2px 0 0;
+  border-style: solid;
+  border-color: #e89d53;
+  height: 40px;
+  line-height: 40px;
+  width: 100px;
+  min-width: 80px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: Din Condensed, sans-serif;
+}
+
+.close-modal {
+  position: relative;
+  float: right;
+  top: 0;
+  color: #e89d53;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: Ethnocentric Rg, sans-serif;
+}
+
+.button-modal:last-child {
+  border-width: 0;
 }
 
 .button-modal:hover {
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: #e89d53;
-    text-shadow: 0 0 20px #e89d53;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #e89d53;
+  text-shadow: 0 0 20px #e89d53;
 }
 
-.div-block-3 {
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 50px;
-    margin: auto;
-    display: flex;
-    position: absolute;
-    top: auto;
-    bottom: 12.5%;
-    left: 0%;
-    right: 0%;
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  width: 100%;
 }
 
-.div-block-4 {
-    background-color: #e89d53;
-    width: 5px;
-    height: 32px;
-    padding-left: 1px;
-    padding-right: 1px;
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 50px;
+  margin: 25px 0;
+  width: 100%;
+  bottom: 25px;
+  z-index: 9;
+}
+
+/* Lower the opacity of the text inside all buttons when one button is hovered */
+nav:hover button:not(:hover) {
+  color: rgba(232, 157, 83, 0.5);
+}
+
+.modal {
+  display: none;
+  flex-flow: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  max-width: 400px;
+  padding: 40px 20px;
+  background-color: #21292b;
+  color: white;
+  height: 100%;
+  z-index: 99;
+}
+
+.modal p {
+  line-height: 1.5rem;
 }
 
 .extras {
-    color: #e89d53;
-    text-align: center;
-    word-break: normal;
-    height: 5%;
-    font-size: 10px;
-    position: fixed;
-    top: auto;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+  color: #e89d53;
+  text-align: center;
+  word-break: normal;
+  height: 5%;
+  font-size: 10px;
+  position: fixed;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 @media screen and (max-width: 991px) {
-    .button-modal {
-      width: 80px;
-      min-width: 80px;
-      margin-left: 10px;
-      margin-right: 10px;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  
-    .modal-body {
-      width: 650px;
-      height: 600px;
-    }
-  
-    .heading {
-      margin-bottom: 20px;
-    }
 
 }
 
 @media screen and (max-width: 767px) {
-    .modal-body {
-      width: 568px;
-      height: 568px;
-    }
-  
-    .text-field, .text-field-2, .text-field-3 {
-      background-color: #eaded6;
-      border: .5px solid #323c3f;
-    }
+
 }
 
 @media screen and (max-width: 479px) {
-    .modal-body {
-        width: 320px;
-        height: 100%;
-    }
 
-    .div-block-3 {
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        text-align: center;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        height: 200px;
-        margin-top: auto;
-        display: block;
-        top: auto;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-    }
-
-    .submit-button {
-        left: 100px;
-        right: 100px;
-    }
-
-    .div-block-4 {
-        justify-content: center;
-        align-items: center;
-        width: 64px;
-        height: 2px;
-        display: block;
-        position: relative;
-        top: 0%;
-        bottom: 0%;
-        left: 40%;
-        right: 0%;
-    }
 }
 
 @font-face {
-    font-family: 'Rajdhani';
-    src: url('../fonts/rajdhani-regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Rajdhani';
-    src: url('../fonts/rajdhani-light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Rajdhani';
-    src: url('../fonts/rajdhani-medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Rajdhani';
-    src: url('../fonts/rajdhani-semibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Rajdhani';
-    src: url('../fonts/rajdhani-bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Ethnocentric Rg';
-    src: url('../fonts/ethnocentric-rg.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Ethnocentric Rg It';
-    src: url('../fonts/ethnocentric-rg-it.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Din Alternate';
-    src: url('../fonts/din-alternate-bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Din Condensed';
-    src: url('../fonts/din-condensed-bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: 'Rajdhani';
+  src: url('./fonts/rajdhani-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('./fonts/rajdhani-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('./fonts/rajdhani-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('./fonts/rajdhani-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('./fonts/rajdhani-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ethnocentric Rg';
+  src: url('./fonts/ethnocentric-rg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ethnocentric Rg It';
+  src: url('./fonts/ethnocentric-rg-it.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Din Alternate';
+  src: url('./fonts/din-alternate-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Din Condensed';
+  src: url('./fonts/din-condensed-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
